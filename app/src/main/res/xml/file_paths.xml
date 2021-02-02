@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!--//每个节点都支持两个属性：name+path
+        //path：需要临时授权访问的路径（.代表所有路径）
+        //name：就是你给这个访问路径起个名字-->
+
+    <!--代表的目录即为：Environment.getExternalStorageDirectory()/Android/data/包名/-->
+    <external-path
+        name="files_root"
+        path="Android/data/包名/" />
+
+    <!--Environment.getExternalStorageDirectory()-->
+    <external-path
+        name="external_root"
+        path="." />
+
+    <!--Environment.getExternalStorageDirectory()/pics-->
+    <external-path
+        name="external_pics"
+        path="pics" />
+
+
+    <files-path
+        name="my_files"
+        path="text/" />
+
+</paths>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="app_funcs">
+        <item>Parcelable的使用</item>
+    </array>
+</resources>
