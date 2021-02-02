@@ -2,6 +2,7 @@ package android.gqy.experience.activities.home
 
 import android.gqy.experience.R
 import android.gqy.experience.activities.BaseActivity
+import android.gqy.experience.activities.coordinatorlayout.CoordinatorLayoutActivity
 import android.gqy.experience.activities.drawindicator.DrawViewPagerIndicatorActivity
 import android.gqy.experience.activities.drawrotecircle.CirclePgBarActivity
 import android.gqy.experience.activities.home.adapter.AppFunctionAdapter
@@ -49,6 +50,7 @@ class HomeActivity : BaseActivity() {
             FuncMenu.CircleProgressBar -> jumpToActivity(CirclePgBarActivity::class.java)
             FuncMenu.Scroller -> jumpToActivity(ScrollerUsageActivity::class.java)
             FuncMenu.DrawViewPagerIndicator -> jumpToActivity(DrawViewPagerIndicatorActivity::class.java)
+            FuncMenu.CoordinatorLayout -> jumpToActivity(CoordinatorLayoutActivity::class.java)
         }
     }
 
@@ -63,6 +65,7 @@ class HomeActivity : BaseActivity() {
         list.add(FuncMenu.CircleProgressBar)
         list.add(FuncMenu.Scroller)
         list.add(FuncMenu.DrawViewPagerIndicator)
+        list.add(FuncMenu.CoordinatorLayout)
         return list
     }
 }

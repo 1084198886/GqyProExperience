@@ -69,6 +69,7 @@
         <activity android:name=".activities.drawrotecircle.CirclePgBarActivity" />
         <activity android:name=".activities.scroller.ScrollerUsageActivity" />
         <activity android:name=".activities.drawindicator.DrawViewPagerIndicatorActivity" />
+        <activity android:name=".activities.coordinatorlayout.CoordinatorLayoutActivity" />
 
         <!--FileProvider注册-->
         <provider

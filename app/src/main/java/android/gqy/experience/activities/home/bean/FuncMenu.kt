@@ -13,7 +13,8 @@ enum class FuncMenu(desc: String) {
     FileProvider("FileProvider使用"),
     CircleProgressBar("Canvas绘制圆形进度条"),
     Scroller("Scroller实现下拉回弹"),
-    DrawViewPagerIndicator("Canvas绘制ViewPager指示器");
+    DrawViewPagerIndicator("Canvas绘制ViewPager指示器"),
+    CoordinatorLayout("CoordinatorLayout+TabLayout+ViewPager嵌套滚动");
 
     var desc = desc
 }
