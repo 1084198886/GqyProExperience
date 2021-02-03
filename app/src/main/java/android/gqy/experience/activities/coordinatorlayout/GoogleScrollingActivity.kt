@@ -14,7 +14,6 @@ import com.google.android.material.snackbar.Snackbar
  * @desc Material Design里折叠工具栏的效果
  */
 class GoogleScrollingActivity : AppCompatActivity() {
-
     private lateinit var collapsingToolbarLayout: CollapsingToolbarLayout
     private var state = CollapsingToolbarLayoutState.EXPANDED
 
@@ -35,30 +34,28 @@ class GoogleScrollingActivity : AppCompatActivity() {
         }
 
         val appbar = findViewById<AppBarLayout>(R.id.app_bar)
-        appbar.addOnOffsetChangedListener(object : AppBarLayout.OnOffsetChangedListener {
-            override fun onOffsetChanged(appBarLayout: AppBarLayout, verticalOffset: Int) {
-                if (verticalOffset == 0) {
-                    if (state != CollapsingToolbarLayoutState.EXPANDED) {
-                        state = CollapsingToolbarLayoutState.EXPANDED;//修改状态标记为展开
-                        collapsingToolbarLayout.title = "EXPANDED";//设置title为EXPANDED
+        appbar.addOnOffsetChangedListener(AppBarLayout.OnOffsetChangedListener { 
+                appBarLayout, verticalOffset ->
+            if (verticalOffset == 0) {
+                if (state != CollapsingToolbarLayoutState.EXPANDED) {
+                    state = CollapsingToolbarLayoutState.EXPANDED
+                    collapsingToolbarLayout.title = "EXPANDED"
+                }
+            } else if (Math.abs(verticalOffset) >= appBarLayout.totalScrollRange) {
+                if (state != CollapsingToolbarLayoutState.COLLAPSED) {
+                    collapsingToolbarLayout.title = ""
+                    playButton.visibility = View.VISIBLE
+                    state = CollapsingToolbarLayoutState.COLLAPSED
+                }
+            } else {
+                if (state != CollapsingToolbarLayoutState.INTERNEDIATE) {
+                    if (state == CollapsingToolbarLayoutState.COLLAPSED) {
+                        playButton.visibility = View.GONE
                     }
-                } else if (Math.abs(verticalOffset) >= appBarLayout.totalScrollRange) {
-                    if (state != CollapsingToolbarLayoutState.COLLAPSED) {
-                        collapsingToolbarLayout.title = "";//设置title不显示
-                        playButton.visibility = View.VISIBLE;//隐藏播放按钮
-                        state = CollapsingToolbarLayoutState.COLLAPSED;//修改状态标记为折叠
-                    }
-                } else {
-                    if (state != CollapsingToolbarLayoutState.INTERNEDIATE) {
-                        if (state == CollapsingToolbarLayoutState.COLLAPSED) {
-                            playButton.visibility = View.GONE;//由折叠变为中间状态时隐藏播放按钮
-                        }
-                        collapsingToolbarLayout.title = "INTERNEDIATE";//设置title为INTERNEDIATE
-                        state = CollapsingToolbarLayoutState.INTERNEDIATE;//修改状态标记为中间
-                    }
+                    collapsingToolbarLayout.title = "INTERNEDIATE"
+                    state = CollapsingToolbarLayoutState.INTERNEDIATE
                 }
             }
-
         })
     }
 
