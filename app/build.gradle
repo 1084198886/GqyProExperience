@@ -55,7 +55,7 @@ android {
         variant.outputs.all { output ->
             def outputFile = output.outputFile
             if (outputFile != null && outputFile.name.endsWith('.apk')) {
-                outputFileName = "app_release.apk"
+                outputFileName = "ExperiencePro_release.apk"
             }
         }
     }

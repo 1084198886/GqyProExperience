@@ -1,7 +1,7 @@
 .PHONEY: .o
 
 APPPATH=./app/build/outputs/apk/release
-BUILDAPK=app-release.apk
+BUILDAPK=ExperiencePro_release.apk
 GRADLE=./gradlew
 ZIP=zip
 SALT_KEY=.sign_salt

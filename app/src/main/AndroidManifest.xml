@@ -54,6 +54,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+
         <activity android:name=".activities.parcelable.ParcelableActivity" />
         <activity android:name=".activities.splash.SplashActivity">
             <intent-filter>
@@ -69,9 +70,10 @@
         <activity android:name=".activities.drawrotecircle.CirclePgBarActivity" />
         <activity android:name=".activities.scroller.ScrollerUsageActivity" />
         <activity android:name=".activities.drawindicator.DrawViewPagerIndicatorActivity" />
-        <activity android:name=".activities.coordinatorlayout.CoordinatorLayoutActivity" />
-
-        <!--FileProvider注册-->
+        <activity android:name=".activities.coordinatorlayout.CoordinatorLayoutActivity" /> <!-- FileProvider注册 -->
+        <activity
+            android:name=".activities.coordinatorlayout.GoogleScrollingActivity"
+            android:label="@string/title_activity_scrolling" />
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="android.gqy.experience.fileProvider"

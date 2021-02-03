@@ -2,7 +2,6 @@ package android.gqy.experience.activities.coordinatorlayout
 
 import android.gqy.experience.R
 import android.gqy.experience.activities.BaseActivity
-import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentPagerAdapter
