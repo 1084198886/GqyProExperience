@@ -93,4 +93,6 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="action_settings">Settings</string>
+    <string name="behavior_sample_title">android.gqy.experience.activities.coordinatorlayout.behavior.SampleTitleBehavior</string>
+
 </resources>
