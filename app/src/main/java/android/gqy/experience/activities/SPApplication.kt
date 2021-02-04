@@ -1,10 +1,8 @@
 package android.gqy.experience.activities
 
-import android.app.Application
-import android.content.Context
-import androidx.multidex.MultiDex
+import androidx.multidex.MultiDexApplication
 
-class SPApplication : Application() {
+class SPApplication : MultiDexApplication() {
     companion object {
         @Volatile
         private var mInstance: SPApplication? = null
@@ -17,10 +15,5 @@ class SPApplication : Application() {
     override fun onCreate() {
         super.onCreate()
         mInstance = this
-    }
-
-    override fun attachBaseContext(base: Context) {
-        super.attachBaseContext(base)
-        MultiDex.install(this)
     }
 }

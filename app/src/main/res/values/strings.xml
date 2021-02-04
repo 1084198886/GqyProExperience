@@ -94,5 +94,6 @@
     </string>
     <string name="action_settings">Settings</string>
     <string name="behavior_sample_title">android.gqy.experience.activities.coordinatorlayout.behavior.SampleTitleBehavior</string>
+    <string name="cover_header_behavior">android.gqy.experience.activities.coordinatorlayout.behavior.CoverHeaderScrollBehavior</string>
 
 </resources>

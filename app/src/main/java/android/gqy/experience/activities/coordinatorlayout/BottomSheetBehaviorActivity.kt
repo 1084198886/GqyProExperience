@@ -5,7 +5,6 @@ import android.gqy.experience.activities.BaseActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.widget.Button
-import android.widget.FrameLayout
 import com.google.android.material.bottomsheet.BottomSheetDialog
 
 /**
@@ -14,7 +13,6 @@ import com.google.android.material.bottomsheet.BottomSheetDialog
  * @desc  BottomSheetDialog使用
  */
 class BottomSheetBehaviorActivity : BaseActivity() {
-    private lateinit var shareView: FrameLayout
     private var sheetDialog: BottomSheetDialog? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {

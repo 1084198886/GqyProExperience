@@ -17,7 +17,8 @@ enum class FuncMenu(desc: String) {
     CoordinatorLayout("CoordinatorLayout+TabLayout+ViewPager嵌套滚动"),
     GoogleScrollingActivity("Google官方Demo中折叠工具栏效果"),
     MatialDesignBehavior("自定义Behavior"),
-    BottomSheetBehaviorUsage("Google官方BottomSheetBehavior使用之BottomSheetDialog");
+    BottomSheetBehavior("Google官方BottomSheetBehavior使用之BottomSheetDialog"),
+    CoverHeaderScrollBehavior("自定义Behavior实现RecyclerView上滑覆盖Header效果");
 
     var desc = desc
 }

@@ -1,8 +1,8 @@
 package android.gqy.experience.activities.coordinatorlayout
 
 import android.gqy.experience.R
+import android.gqy.experience.activities.BaseActivity
 import android.gqy.experience.activities.coordinatorlayout.adapter.CoordinatorAdapter
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
  * created by gqy on 2021/2/3
  * @desc 自定义Behavior
  */
-class BehaviorActivity : AppCompatActivity() {
+class BehaviorActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
