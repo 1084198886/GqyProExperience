@@ -3,6 +3,7 @@ package android.gqy.experience.activities.home
 import android.gqy.experience.R
 import android.gqy.experience.activities.BaseActivity
 import android.gqy.experience.activities.coordinatorlayout.BehaviorActivity
+import android.gqy.experience.activities.coordinatorlayout.BottomSheetBehaviorActivity
 import android.gqy.experience.activities.coordinatorlayout.CoordinatorLayoutActivity
 import android.gqy.experience.activities.coordinatorlayout.GoogleScrollingActivity
 import android.gqy.experience.activities.drawindicator.DrawViewPagerIndicatorActivity
@@ -55,6 +56,7 @@ class HomeActivity : BaseActivity() {
             FuncMenu.CoordinatorLayout -> jumpToActivity(CoordinatorLayoutActivity::class.java)
             FuncMenu.GoogleScrollingActivity -> jumpToActivity(GoogleScrollingActivity::class.java)
             FuncMenu.MatialDesignBehavior -> jumpToActivity(BehaviorActivity::class.java)
+            FuncMenu.BottomSheetBehaviorUsage -> jumpToActivity(BottomSheetBehaviorActivity::class.java)
         }
     }
 
@@ -72,6 +74,7 @@ class HomeActivity : BaseActivity() {
         list.add(FuncMenu.CoordinatorLayout)
         list.add(FuncMenu.GoogleScrollingActivity)
         list.add(FuncMenu.MatialDesignBehavior)
+        list.add(FuncMenu.BottomSheetBehaviorUsage)
         return list
     }
 }

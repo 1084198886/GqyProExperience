@@ -16,7 +16,8 @@ enum class FuncMenu(desc: String) {
     DrawViewPagerIndicator("Canvas绘制ViewPager指示器"),
     CoordinatorLayout("CoordinatorLayout+TabLayout+ViewPager嵌套滚动"),
     GoogleScrollingActivity("Google官方Demo中折叠工具栏效果"),
-    MatialDesignBehavior("自定义Behavior");
+    MatialDesignBehavior("自定义Behavior"),
+    BottomSheetBehaviorUsage("Google官方BottomSheetBehavior使用之BottomSheetDialog");
 
     var desc = desc
 }
