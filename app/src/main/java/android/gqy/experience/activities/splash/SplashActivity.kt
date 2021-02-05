@@ -19,5 +19,6 @@ class SplashActivity : BaseActivity() {
     override fun onResume() {
         super.onResume()
         jumpToActivity(HomeActivity::class.java)
+        finish()
     }
 }

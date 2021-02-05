@@ -16,8 +16,11 @@ import java.util.ArrayList
  */
 object AppCommonUtil {
 
+    val needPermissions =  arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE,
+        Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.CAMERA)
+
     fun checkPermissions(context: Context): Boolean {
-        val needPermissions = arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE)
+
         needPermissions.forEach {
             if (ContextCompat.checkSelfPermission(
                     context,

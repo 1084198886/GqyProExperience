@@ -14,14 +14,13 @@
         name="external_root"
         path="." />
 
-    <!--Environment.getExternalStorageDirectory()/pics-->
+    <external-files-path
+        name="images"
+        path="files/Pictures/OriPicture/test"/>
+
+    <!--Environment.getExternalStorageDirectory()/camera/image-->
     <external-path
-        name="external_pics"
-        path="pics" />
-
-
-    <files-path
-        name="my_files"
-        path="text/" />
+        name="external_image"
+        path="camera/image" />
 
 </paths>

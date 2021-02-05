@@ -20,14 +20,12 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.tbruyelle.rxpermissions2.RxPermissions
 import com.zhihu.matisse.Matisse
 import com.zhihu.matisse.MimeType
 import com.zhihu.matisse.engine.impl.GlideEngine
 import com.zhihu.matisse.engine.impl.PicassoEngine
 import com.zhihu.matisse.filter.Filter
 import com.zhihu.matisse.internal.entity.CaptureStrategy
-import java.lang.Throwable
 import kotlin.Int
 import kotlin.String
 import kotlin.also
@@ -96,7 +94,7 @@ class ImageSelectorActivity : BaseActivity(), View.OnClickListener {
                 .countable(true)
                 .capture(true)
                 .captureStrategy(
-                    CaptureStrategy(true, "com.zhihu.matisse.sample.fileprovider", "test")
+                    CaptureStrategy(true, "android.gqy.experience.fileProvider", "test")
                 )
                 .maxSelectable(9)
                 .addFilter(GifSizeFilter(320, 320, 5 * Filter.K * Filter.K))

@@ -82,9 +82,11 @@
             android:name="androidx.core.content.FileProvider"
             android:authorities="android.gqy.experience.fileProvider"
             android:exported="false"
+            tools:replace="android:authorities"
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
+                tools:replace="android:resource"
                 android:resource="@xml/file_paths" />
         </provider>
     </application>

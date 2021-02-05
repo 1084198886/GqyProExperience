@@ -9,6 +9,7 @@ import android.gqy.experience.activities.coordinatorlayout.GoogleScrollingActivi
 import android.gqy.experience.activities.coordinatorlayout.CoverHeaderScrollActivity
 import android.gqy.experience.activities.drawindicator.DrawViewPagerIndicatorActivity
 import android.gqy.experience.activities.drawrotecircle.CirclePgBarActivity
+import android.gqy.experience.activities.fileprovider.FileProviderActivity
 import android.gqy.experience.activities.home.adapter.AppFunctionAdapter
 import android.gqy.experience.activities.home.bean.FuncMenu
 import android.gqy.experience.activities.imageselector.ImageSelectorActivity
@@ -54,7 +55,7 @@ class HomeActivity : BaseActivity() {
         when (bean) {
             FuncMenu.Parcelable -> jumpToActivity(ParcelableActivity::class.java)
             FuncMenu.NestedScrollView -> jumpToActivity(NestedScrollViewActivity::class.java)
-            FuncMenu.FileProvider -> jumpToActivity(NestedScrollViewActivity::class.java)
+            FuncMenu.FileProvider -> jumpToActivity(FileProviderActivity::class.java)
             FuncMenu.CircleProgressBar -> jumpToActivity(CirclePgBarActivity::class.java)
             FuncMenu.Scroller -> jumpToActivity(ScrollerUsageActivity::class.java)
             FuncMenu.DrawViewPagerIndicator -> jumpToActivity(DrawViewPagerIndicatorActivity::class.java)

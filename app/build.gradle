@@ -93,4 +93,5 @@ dependencies {
 
     implementation project(':imgselectorlib')
     implementation 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.5@aar'
+    implementation 'org.apache.commons:commons-lang3:3.7'
 }
