@@ -18,7 +18,8 @@ enum class FuncMenu(desc: String) {
     GoogleScrollingActivity("Google官方Demo中折叠工具栏效果"),
     MatialDesignBehavior("自定义Behavior"),
     BottomSheetBehavior("Google官方BottomSheetBehavior使用之BottomSheetDialog"),
-    CoverHeaderScrollBehavior("自定义Behavior实现RecyclerView上滑覆盖Header效果");
+    CoverHeaderScrollBehavior("自定义Behavior实现RecyclerView上滑覆盖Header效果"),
+    ImageSelector("知乎图片选择器");
 
     var desc = desc
 }

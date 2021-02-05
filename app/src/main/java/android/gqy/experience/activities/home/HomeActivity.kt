@@ -11,10 +11,13 @@ import android.gqy.experience.activities.drawindicator.DrawViewPagerIndicatorAct
 import android.gqy.experience.activities.drawrotecircle.CirclePgBarActivity
 import android.gqy.experience.activities.home.adapter.AppFunctionAdapter
 import android.gqy.experience.activities.home.bean.FuncMenu
+import android.gqy.experience.activities.imageselector.ImageSelectorActivity
 import android.gqy.experience.activities.nestedscrollview.NestedScrollViewActivity
 import android.gqy.experience.activities.parcelable.ParcelableActivity
 import android.gqy.experience.activities.scroller.ScrollerUsageActivity
+import android.gqy.experience.utils.RecyclerHorizDivider
 import android.os.Bundle
+import android.widget.ListView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -36,17 +39,18 @@ class HomeActivity : BaseActivity() {
         recyclerView = findViewById<RecyclerView>(R.id.recycler_view)
         val layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         recyclerView.layoutManager = layoutManager
+        recyclerView.addItemDecoration(RecyclerHorizDivider(this, 1,LinearLayoutManager.HORIZONTAL))
         val adapter = AppFunctionAdapter(this)
         adapter.callBack = object : AppFunctionAdapter.ItemClickCallBack {
             override fun itemClick(bean: FuncMenu) {
-                jump(bean)
+                jumpByFuncMenu(bean)
             }
         }
         adapter.setData(getFunctions())
         recyclerView.adapter = adapter
     }
 
-    private fun jump(bean: FuncMenu) {
+    private fun jumpByFuncMenu(bean: FuncMenu) {
         when (bean) {
             FuncMenu.Parcelable -> jumpToActivity(ParcelableActivity::class.java)
             FuncMenu.NestedScrollView -> jumpToActivity(NestedScrollViewActivity::class.java)
@@ -59,12 +63,10 @@ class HomeActivity : BaseActivity() {
             FuncMenu.MatialDesignBehavior -> jumpToActivity(BehaviorActivity::class.java)
             FuncMenu.BottomSheetBehavior -> jumpToActivity(BottomSheetBehaviorActivity::class.java)
             FuncMenu.CoverHeaderScrollBehavior -> jumpToActivity(CoverHeaderScrollActivity::class.java)
+            FuncMenu.ImageSelector -> jumpToActivity(ImageSelectorActivity::class.java)
         }
     }
 
-    /**
-     * 功能列表
-     */
     private fun getFunctions(): List<FuncMenu> {
         val list = ArrayList<FuncMenu>()
         list.add(FuncMenu.Parcelable)
@@ -78,6 +80,7 @@ class HomeActivity : BaseActivity() {
         list.add(FuncMenu.MatialDesignBehavior)
         list.add(FuncMenu.BottomSheetBehavior)
         list.add(FuncMenu.CoverHeaderScrollBehavior)
+        list.add(FuncMenu.ImageSelector)
         return list
     }
 }

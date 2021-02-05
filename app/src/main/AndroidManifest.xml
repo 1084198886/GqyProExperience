@@ -76,6 +76,7 @@
             android:label="@string/title_activity_scrolling" />
         <activity android:name=".activities.coordinatorlayout.BottomSheetBehaviorActivity" />
         <activity android:name=".activities.coordinatorlayout.CoverHeaderScrollActivity" />
+        <activity android:name=".activities.imageselector.ImageSelectorActivity" />
 
         <provider
             android:name="androidx.core.content.FileProvider"
