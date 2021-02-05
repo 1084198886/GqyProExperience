@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView
  * @date 2020/3/31
  * @since 1.0.0
  * @see
- * @desc  TODO
+ * @desc  功能菜单
  */
 class AppFunctionAdapter(context: Context) : RecyclerView.Adapter<AppFunctionAdapter.Holder>() {
     private val list = ArrayList<FuncMenu>()

@@ -11,6 +11,8 @@
     <color name="light_red2">#e02e3e</color>
     <color name="dark_red">#DC0404</color>
 
+    <color name="zhihu_primary">#1E8AE8</color>
+
     <color name="black_overlay">#66000000</color>
     <color name="btn_light_blue">#5bc0de</color>
     <color name="light_gray">#ffa2a2a2</color>
@@ -148,4 +150,32 @@
     <color name="black_trans">#95000000</color>
 
     <color name="purple_dark">#212c54</color>
+
+    <color name="dracula_primary">#263237</color>
+    <color name="dracula_primary_dark">#1D282C</color>
+
+    <color name="dracula_album_popup_bg">#34474E</color>
+    <color name="dracula_album_dropdown_title_text">#DEFFFFFF</color>
+    <color name="dracula_album_dropdown_count_text">#89FFFFFF</color>
+    <color name="dracula_album_dropdown_thumbnail_placeholder">#455A64</color>
+    <color name="dracula_album_empty_view">#4DFFFFFF</color>
+
+    <color name="dracula_item_placeholder">#37474F</color>
+    <color name="dracula_item_checkCircle_backgroundColor">#263237</color>
+    <color name="dracula_item_checkCircle_borderColor">#FFFFFF</color>
+    <color name="dracula_capture">#FFFFFF</color>
+
+    <color name="dracula_page_bg">#232E32</color>
+    <color name="dracula_bottom_toolbar_bg">#34474E</color>
+
+    <color name="dracula_bottom_toolbar_preview_text">#DEFFFFFF</color>
+    <color name="dracula_bottom_toolbar_preview_text_disable">#4DFFFFFF</color>
+    <color name="dracula_bottom_toolbar_apply_text">#03A9F4</color>
+    <color name="dracula_bottom_toolbar_apply_text_disable">#4D03A9F4</color>
+
+    <color name="dracula_preview_bottom_toolbar_back_text">#FFFFFF</color>
+    <color name="dracula_preview_bottom_toolbar_apply_text">#03A9F4</color>
+    <color name="dracula_preview_bottom_toolbar_apply_text_disable">#4D03A9F4</color>
+    <color name="list_bg">#3B3B3B</color>
+
 </resources>

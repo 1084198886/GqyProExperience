@@ -54,7 +54,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-
+        <activity android:name=".activities.coordinatorlayout.BehaviorActivity" />
         <activity android:name=".activities.parcelable.ParcelableActivity" />
         <activity android:name=".activities.splash.SplashActivity">
             <intent-filter>
@@ -74,6 +74,10 @@
         <activity
             android:name=".activities.coordinatorlayout.GoogleScrollingActivity"
             android:label="@string/title_activity_scrolling" />
+        <activity android:name=".activities.coordinatorlayout.BottomSheetBehaviorActivity" />
+        <activity android:name=".activities.coordinatorlayout.CoverHeaderScrollActivity" />
+        <activity android:name=".activities.imageselector.ImageSelectorActivity" />
+
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="android.gqy.experience.fileProvider"
