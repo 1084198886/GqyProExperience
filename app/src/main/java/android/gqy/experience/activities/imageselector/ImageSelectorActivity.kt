@@ -43,7 +43,6 @@ class ImageSelectorActivity : BaseActivity(), View.OnClickListener {
         setContentView(R.layout.activity_image_selector)
 
         findViewById<View>(R.id.zhihu).setOnClickListener(this)
-        findViewById<View>(R.id.dracula).setOnClickListener(this)
         findViewById<View>(R.id.only_gif).setOnClickListener(this)
         val recyclerView = findViewById<View>(R.id.recyclerview) as RecyclerView
         recyclerView.layoutManager = LinearLayoutManager(this)
@@ -117,16 +116,6 @@ class ImageSelectorActivity : BaseActivity(), View.OnClickListener {
                 .setOnCheckedListener({ isChecked ->
                     Log.e("isChecked", "onCheck: isChecked=$isChecked")
                 })
-                .forResult(REQUEST_CODE_CHOOSE)
-            R.id.dracula -> Matisse.from(this@ImageSelectorActivity)
-                .choose(MimeType.ofImage())
-                .theme(R.style.Matisse_Dracula)
-                .countable(false)
-                .addFilter(GifSizeFilter(320, 320, 5 * Filter.K * Filter.K))
-                .maxSelectable(9)
-                .originalEnable(true)
-                .maxOriginalSize(10)
-                .imageEngine(PicassoEngine())
                 .forResult(REQUEST_CODE_CHOOSE)
             R.id.only_gif -> Matisse.from(this@ImageSelectorActivity)
                 .choose(MimeType.of(MimeType.GIF), false)

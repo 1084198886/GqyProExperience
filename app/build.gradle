@@ -32,9 +32,9 @@ android {
         versionName androidGitVersion.name()
         versionCode androidGitVersion.code()
 
-        ndk {
-            abiFilters "armeabi-v7a", "arm64-v8a"
-        }
+//        ndk {
+//            abiFilters "armeabi-v7a", "arm64-v8a"
+//        }
         multiDexEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         signingConfig signingConfigs.debug

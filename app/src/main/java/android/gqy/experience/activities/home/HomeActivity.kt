@@ -2,11 +2,7 @@ package android.gqy.experience.activities.home
 
 import android.gqy.experience.R
 import android.gqy.experience.activities.BaseActivity
-import android.gqy.experience.activities.coordinatorlayout.BehaviorActivity
-import android.gqy.experience.activities.coordinatorlayout.BottomSheetBehaviorActivity
-import android.gqy.experience.activities.coordinatorlayout.CoordinatorLayoutActivity
-import android.gqy.experience.activities.coordinatorlayout.GoogleScrollingActivity
-import android.gqy.experience.activities.coordinatorlayout.CoverHeaderScrollActivity
+import android.gqy.experience.activities.coordinatorlayout.*
 import android.gqy.experience.activities.drawindicator.DrawViewPagerIndicatorActivity
 import android.gqy.experience.activities.drawrotecircle.CirclePgBarActivity
 import android.gqy.experience.activities.fileprovider.FileProviderActivity
@@ -65,6 +61,7 @@ class HomeActivity : BaseActivity() {
             FuncMenu.BottomSheetBehavior -> jumpToActivity(BottomSheetBehaviorActivity::class.java)
             FuncMenu.CoverHeaderScrollBehavior -> jumpToActivity(CoverHeaderScrollActivity::class.java)
             FuncMenu.ImageSelector -> jumpToActivity(ImageSelectorActivity::class.java)
+            FuncMenu.ScrollShowAndHideTitlebar -> jumpToActivity(ScrollShowTitlebarActivity::class.java)
         }
     }
 
@@ -82,6 +79,7 @@ class HomeActivity : BaseActivity() {
         list.add(FuncMenu.BottomSheetBehavior)
         list.add(FuncMenu.CoverHeaderScrollBehavior)
         list.add(FuncMenu.ImageSelector)
+        list.add(FuncMenu.ScrollShowAndHideTitlebar)
         return list
     }
 }
