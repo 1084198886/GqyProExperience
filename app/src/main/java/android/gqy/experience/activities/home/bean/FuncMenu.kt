@@ -20,7 +20,8 @@ enum class FuncMenu(desc: String) {
     BottomSheetBehavior("Google官方BottomSheetBehavior使用之BottomSheetDialog"),
     CoverHeaderScrollBehavior("自定义Behavior实现RecyclerView上滑覆盖Header效果"),
     ImageSelector("知乎图片选择器"),
-    ScrollShowAndHideTitlebar("滑动显示或隐藏标题栏效果");
+    ScrollShowAndHideTitlebar("滑动显示或隐藏标题栏效果"),
+    KuaishouAppDetail("快手APP视频详情页");
 
     var desc = desc
 }

@@ -78,6 +78,7 @@
         <activity android:name=".activities.coordinatorlayout.CoverHeaderScrollActivity" />
         <activity android:name=".activities.imageselector.ImageSelectorActivity" />
         <activity android:name=".activities.coordinatorlayout.ScrollShowTitlebarActivity" />
+        <activity android:name=".activities.coordinatorlayout.KuaishouDetailActivity" />
 
         <provider
             android:name="androidx.core.content.FileProvider"

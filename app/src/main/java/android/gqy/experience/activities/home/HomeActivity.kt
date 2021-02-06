@@ -62,6 +62,7 @@ class HomeActivity : BaseActivity() {
             FuncMenu.CoverHeaderScrollBehavior -> jumpToActivity(CoverHeaderScrollActivity::class.java)
             FuncMenu.ImageSelector -> jumpToActivity(ImageSelectorActivity::class.java)
             FuncMenu.ScrollShowAndHideTitlebar -> jumpToActivity(ScrollShowTitlebarActivity::class.java)
+            FuncMenu.KuaishouAppDetail -> jumpToActivity(KuaishouDetailActivity::class.java)
         }
     }
 
@@ -80,6 +81,7 @@ class HomeActivity : BaseActivity() {
         list.add(FuncMenu.CoverHeaderScrollBehavior)
         list.add(FuncMenu.ImageSelector)
         list.add(FuncMenu.ScrollShowAndHideTitlebar)
+        list.add(FuncMenu.KuaishouAppDetail)
         return list
     }
 }
