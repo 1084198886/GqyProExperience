@@ -16,16 +16,16 @@ import androidx.recyclerview.widget.RecyclerView;
 /**
  * created by gqy on 2021/02/05
  *
- * @desc 水平分割线
+ * @desc RecyclerView分割线
  * @since 1.0.2
  */
-public class RecyclerHorizDivider extends RecyclerView.ItemDecoration {
-    private static final String TAG = "RecyclerHorizDivider";
+public class RecyclerViewDivider extends RecyclerView.ItemDecoration {
+    private static final String TAG = "RecyclerViewDivider";
     private final int mDividerHeight;
     private final int orientation;
     private final Drawable mDivider;
 
-    public RecyclerHorizDivider(Context context, int dividerHeight, int orientation) {
+    public RecyclerViewDivider(Context context, int dividerHeight, int orientation) {
         mDivider = ContextCompat.getDrawable(context, R.drawable.horiz_divider);
         this.mDividerHeight = dividerHeight;
         this.orientation = orientation;

@@ -79,6 +79,10 @@
         <activity android:name=".activities.imageselector.ImageSelectorActivity" />
         <activity android:name=".activities.coordinatorlayout.ScrollShowTitlebarActivity" />
         <activity android:name=".activities.coordinatorlayout.KuaishouDetailActivity" />
+        <activity android:name=".activities.pulltozoomview.PullToZoomListActivity" />
+        <activity android:name=".activities.pulltozoomview.PullToZoomScrollActivity" />
+        <activity android:name=".activities.pulltozoomview.recyclerview.PullToZoomRecyclerActivity" />
+        <activity android:name=".activities.scroller.ScrollParallaxActivity" />
 
         <provider
             android:name="androidx.core.content.FileProvider"

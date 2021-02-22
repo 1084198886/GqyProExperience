@@ -14,13 +14,13 @@ import android.view.View;
  * @desc 自定义会旋转的钟表指针
  * @since 1.0.1
  */
-public  class CirclePgBar extends View {
+public class CirclePgBar extends View {
     private Paint mBackPaint;
     private Paint mFrontPaint;
     private Paint mTextPaint;
-    private float mStrokeWidth = 10; // mWidth-直径  描边属性
+    private final float mStrokeWidth = 10; // mWidth-直径  描边属性
     private float mHalfStrokeWidth = mStrokeWidth / 2;
-    private float mRadius = 200;
+    private final float mRadius = 200;
     private RectF mRect;
     private int mProgress = 0;
     //目标值，想改多少就改多少
@@ -28,7 +28,7 @@ public  class CirclePgBar extends View {
     private int mMax = 100;
     private int mWidth;
     private int mHeight;
-    private String TAG = "CirclePgBar";
+    private static final String TAG = "CirclePgBar";
 
 
     public CirclePgBar(Context context) {
@@ -72,20 +72,27 @@ public  class CirclePgBar extends View {
         setMeasuredDimension(mWidth, mHeight);
     }
 
+    /**
+     * 只绘制一次背景圆。
+     */
+    private boolean hasDrawBackCircle = false;
 
     @Override
     protected void onDraw(Canvas canvas) {
         initRect();
         // 弧形角度；
         float angle = mProgress / (float) mMax * 360;
-        // 绘制圆形；
-        canvas.drawCircle(mWidth / 2, mHeight / 2, mRadius, mBackPaint);
-        // 绘制圆弧；useCenter:true 是否画出半径
+        if (!hasDrawBackCircle) {
+            hasDrawBackCircle = true;
+            canvas.drawCircle(mWidth / 2, mHeight / 2, mRadius, mBackPaint);
+        }
+
+        // 绘制圆弧 useCenter==true 画半径
         canvas.drawArc(mRect, -90, angle, true, mFrontPaint);
         canvas.drawText(mProgress + "%", mWidth / 2 + mHalfStrokeWidth, mHeight / 2 + mHalfStrokeWidth, mTextPaint);
         if (mProgress < mTargetProgress) {
             mProgress += 1;
-            // 触发onDraw； 也可以子线程 posInvalidate()
+            // 触发onDraw;也可以子线程posInvalidate()
             invalidate();
         }
 

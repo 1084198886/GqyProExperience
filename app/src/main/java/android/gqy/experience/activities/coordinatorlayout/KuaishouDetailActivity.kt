@@ -3,7 +3,7 @@ package android.gqy.experience.activities.coordinatorlayout
 import android.gqy.experience.R
 import android.gqy.experience.activities.BaseActivity
 import android.gqy.experience.activities.coordinatorlayout.adapter.CoordinatorAdapter
-import android.gqy.experience.utils.RecyclerHorizDivider
+import android.gqy.experience.utils.RecyclerViewDivider
 import android.media.MediaPlayer
 import android.net.Uri
 import android.os.Bundle
@@ -34,7 +34,7 @@ class KuaishouDetailActivity : BaseActivity() {
         surfaceView.holder!!.addCallback(holderCallBack)
         recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-        recyclerView.addItemDecoration(RecyclerHorizDivider(this, 2, LinearLayoutManager.VERTICAL))
+        recyclerView.addItemDecoration(RecyclerViewDivider(this, 2, RecyclerView.VERTICAL))
         val adapter = CoordinatorAdapter(this)
         adapter.setData(arrayListOf("A", "B", "B", "B", "B", "B", "B", "B", "B", "B"))
         recyclerView.adapter = adapter
