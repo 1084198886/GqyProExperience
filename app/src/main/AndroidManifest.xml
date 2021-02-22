@@ -83,6 +83,7 @@
         <activity android:name=".activities.pulltozoomview.PullToZoomScrollActivity" />
         <activity android:name=".activities.pulltozoomview.recyclerview.PullToZoomRecyclerActivity" />
         <activity android:name=".activities.scroller.ScrollParallaxActivity" />
+        <activity android:name=".activities.touchevent.TouchEventActivity" />
 
         <provider
             android:name="androidx.core.content.FileProvider"

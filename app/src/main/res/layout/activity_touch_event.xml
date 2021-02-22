@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <android.gqy.experience.activities.touchevent.view.ParentContainerView
+        android:id="@+id/ll_parent"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:background="@color/light_green">
+
+        <android.gqy.experience.activities.touchevent.view.ChildTextView
+            android:id="@+id/tv_child"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="80dp"
+            android:background="@color/cl_red"
+            android:gravity="center"
+            android:text="子View"
+            android:textColor="@color/white"
+            android:textSize="40sp" />
+    </android.gqy.experience.activities.touchevent.view.ParentContainerView>
+</LinearLayout>

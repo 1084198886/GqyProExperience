@@ -25,7 +25,8 @@ enum class FuncMenu(desc: String) {
     KuaishouAppDetail("快手APP视频详情页"),
     PullToZoomListView("下拉缩放Header的ListView"),
     PullToZoomScrollView("下拉缩放Header的ScrollView"),
-    PullToZoomRecyclerView("下拉缩放Header的RecyclerView");
+    PullToZoomRecyclerView("下拉缩放Header的RecyclerView"),
+    TouchEventDemo("触摸事件测试");
 
     var desc = desc
 }

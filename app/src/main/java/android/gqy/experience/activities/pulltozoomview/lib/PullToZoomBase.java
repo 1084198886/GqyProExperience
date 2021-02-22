@@ -6,7 +6,6 @@ import android.content.res.TypedArray;
 import android.gqy.experience.R;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -29,7 +28,6 @@ import androidx.annotation.NonNull;
  * Why & What is modified:
  */
 public abstract class PullToZoomBase<T extends View> extends LinearLayout implements IPullToZoom<T> {
-    private static final String TAG = "PullToZoomBase";
     private static final float FRICTION = 2.0f;
     protected T mRootView;
     protected View mHeaderView;//头部View
@@ -39,7 +37,7 @@ public abstract class PullToZoomBase<T extends View> extends LinearLayout implem
     protected int mScreenWidth;
 
     private boolean isZoomEnabled = true;
-    private boolean isParallax = true;  //视差效果
+    private boolean isParallax = true;
     private boolean isZooming = false;
     private boolean isHideHeader = false;
 
@@ -162,12 +160,10 @@ public abstract class PullToZoomBase<T extends View> extends LinearLayout implem
 
         if (action == MotionEvent.ACTION_CANCEL || action == MotionEvent.ACTION_UP) {
             mIsBeingDragged = false;
-            Log.d(TAG, "onInterceptTouchEvent action1=" + action);
             return false;
         }
 
         if (action != MotionEvent.ACTION_DOWN && mIsBeingDragged) {
-            Log.d(TAG, "onInterceptTouchEvent action2=" + action);
             return true;
         }
         switch (action) {
@@ -201,7 +197,7 @@ public abstract class PullToZoomBase<T extends View> extends LinearLayout implem
                 break;
             }
         }
-        Log.d(TAG, "onInterceptTouchEvent mIsBeingDragged=" + mIsBeingDragged);
+
         return mIsBeingDragged;
     }
 
@@ -212,7 +208,6 @@ public abstract class PullToZoomBase<T extends View> extends LinearLayout implem
         }
 
         if (event.getAction() == MotionEvent.ACTION_DOWN && event.getEdgeFlags() != 0) {
-            Log.d(TAG, "onTouchEvent action=" + event.getAction());
             return false;
         }
 
@@ -239,12 +234,10 @@ public abstract class PullToZoomBase<T extends View> extends LinearLayout implem
 
             case MotionEvent.ACTION_CANCEL:
             case MotionEvent.ACTION_UP: {
-                Log.d(TAG, "onTouchEvent action cancel up=" + event.getAction() + ",mIsBeingDragged=" + mIsBeingDragged);
                 if (mIsBeingDragged) {
                     mIsBeingDragged = false;
                     // If we're already refreshing, just scroll back to the top
                     if (isZooming()) {
-                        Log.d(TAG, "onTouchEvent isZooming");
                         smoothScrollToTop();
                         if (onPullZoomListener != null) {
                             onPullZoomListener.onPullZoomEnd();
@@ -266,7 +259,6 @@ public abstract class PullToZoomBase<T extends View> extends LinearLayout implem
 
         initialMotionValue = mInitialMotionY;
         lastMotionValue = mLastMotionY;
-        Log.e(TAG, "initialMotionValue=" + initialMotionValue + ",lastMotionValue=" + lastMotionValue);
 
         newScrollValue = Math.round(Math.min(initialMotionValue - lastMotionValue, 0) / FRICTION);
 

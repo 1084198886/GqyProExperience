@@ -5,7 +5,6 @@ import android.gqy.experience.activities.BaseActivity
 import android.gqy.experience.activities.coordinatorlayout.adapter.CoordinatorAdapter
 import android.gqy.experience.utils.RecyclerViewDivider
 import android.media.MediaPlayer
-import android.net.Uri
 import android.os.Bundle
 import android.view.SurfaceHolder
 import android.view.SurfaceView
@@ -36,7 +35,7 @@ class KuaishouDetailActivity : BaseActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         recyclerView.addItemDecoration(RecyclerViewDivider(this, 2, RecyclerView.VERTICAL))
         val adapter = CoordinatorAdapter(this)
-        adapter.setData(arrayListOf("A", "B", "B", "B", "B", "B", "B", "B", "B", "B"))
+        adapter.setData(arrayListOf("item1", "item2", "item3", "item4", "item5", "item6", "item7", "item8", "item9", "item10"))
         recyclerView.adapter = adapter
     }
 
@@ -57,8 +56,8 @@ class KuaishouDetailActivity : BaseActivity() {
         override fun surfaceCreated(holder: SurfaceHolder) {
             initMediaPlayer()
             //设置让surfaceView来播放
-            mediaPlayer?.setDisplay(holder)
-            mediaPlayer?.prepareAsync()
+            mediaPlayer!!.setDisplay(surfaceView.holder)
+            mediaPlayer!!.prepareAsync()
         }
     }
 
@@ -72,8 +71,7 @@ class KuaishouDetailActivity : BaseActivity() {
             }
         })
         try {
-            val uri = Uri.parse("http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
-            mediaPlayer!!.setDataSource(this, uri)
+            mediaPlayer!!.setDataSource("http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
         } catch (e: Exception) {
             e.printStackTrace()
         }
