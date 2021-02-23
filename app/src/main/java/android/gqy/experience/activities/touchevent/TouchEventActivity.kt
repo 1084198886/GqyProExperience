@@ -3,6 +3,7 @@ package android.gqy.experience.activities.touchevent
 import android.annotation.SuppressLint
 import android.gqy.experience.R
 import android.gqy.experience.activities.BaseActivity
+import android.gqy.experience.activities.touchevent.view.ChildContainerView
 import android.gqy.experience.activities.touchevent.view.ChildTextView
 import android.gqy.experience.activities.touchevent.view.ParentContainerView
 import android.gqy.experience.utils.ToastUtil
