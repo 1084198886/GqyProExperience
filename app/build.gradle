@@ -32,9 +32,9 @@ android {
         versionName androidGitVersion.name()
         versionCode androidGitVersion.code()
 
-        ndk {
-            abiFilters "armeabi-v7a", "arm64-v8a"
-        }
+//        ndk {
+//            abiFilters "armeabi-v7a", "arm64-v8a"
+//        }
         multiDexEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         signingConfig signingConfigs.debug
@@ -85,7 +85,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.2.1'
 
-    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
     implementation 'com.google.zxing:core:3.4.0'
     implementation 'com.android.support:multidex:1.0.3'
     api 'com.google.code.gson:gson:2.8.6'
@@ -93,5 +93,5 @@ dependencies {
 
     implementation project(':imgselectorlib')
     implementation 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.5@aar'
-    implementation 'org.apache.commons:commons-lang3:3.7'
+    implementation 'org.apache.commons:commons-lang3:3.9'
 }

@@ -1,10 +1,10 @@
 package android.gqy.experience.activities.coordinatorlayout
 
 import android.gqy.experience.R
+import android.gqy.experience.activities.BaseActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
-import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.appbar.AppBarLayout
 import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.google.android.material.snackbar.Snackbar
@@ -13,7 +13,7 @@ import com.google.android.material.snackbar.Snackbar
  * https://www.cnblogs.com/ldq2016/p/10690231.html
  * @desc Material Design里折叠工具栏的效果
  */
-class GoogleScrollingActivity : AppCompatActivity() {
+class GoogleScrollingActivity : BaseActivity() {
     private lateinit var collapsingToolbarLayout: CollapsingToolbarLayout
     private var state = CollapsingToolbarLayoutState.EXPANDED
 
