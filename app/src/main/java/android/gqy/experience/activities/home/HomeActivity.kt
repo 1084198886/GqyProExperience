@@ -16,6 +16,7 @@ import android.gqy.experience.activities.pulltozoomview.PullToZoomScrollActivity
 import android.gqy.experience.activities.pulltozoomview.recyclerview.PullToZoomRecyclerActivity
 import android.gqy.experience.activities.scroller.ScrollerUsageActivity
 import android.gqy.experience.activities.scroller.ScrollParallaxActivity
+import android.gqy.experience.activities.touchevent.RequestDisallowInterceptTouchEventActivity
 import android.gqy.experience.activities.touchevent.TouchEventActivity
 import android.gqy.experience.utils.RecyclerViewDivider
 import android.os.Bundle
@@ -72,6 +73,7 @@ class HomeActivity : BaseActivity() {
             FuncMenu.PullToZoomScrollView -> jumpToActivity(PullToZoomScrollActivity::class.java)
             FuncMenu.PullToZoomRecyclerView -> jumpToActivity(PullToZoomRecyclerActivity::class.java)
             FuncMenu.TouchEventDemo -> jumpToActivity(TouchEventActivity::class.java)
+            FuncMenu.RequestDisallowInterceptTouchEvent -> jumpToActivity(RequestDisallowInterceptTouchEventActivity::class.java)
         }
     }
 
@@ -96,12 +98,13 @@ class HomeActivity : BaseActivity() {
         list.add(FuncMenu.PullToZoomScrollView)
         list.add(FuncMenu.PullToZoomRecyclerView)
         list.add(FuncMenu.TouchEventDemo)
+        list.add(FuncMenu.RequestDisallowInterceptTouchEvent)
         return list
     }
 
 
     override fun onResume() {
         super.onResume()
-        jumpToActivity(TouchEventActivity::class.java)
+//        jumpToActivity(TouchEventActivity::class.java)
     }
 }

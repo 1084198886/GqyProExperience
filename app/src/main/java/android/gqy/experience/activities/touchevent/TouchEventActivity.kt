@@ -35,13 +35,13 @@ class TouchEventActivity : BaseActivity() {
             override fun onTouch(v: View, event: MotionEvent): Boolean {
                 when (event.action) {
                     MotionEvent.ACTION_DOWN -> {
-                        toast("OnTouchListener.onTouch ACTION_DOWN")
+                        log("parent OnTouchListener.onTouch ACTION_DOWN")
                     }
                     MotionEvent.ACTION_MOVE -> {
-                        log("OnTouchListener.onTouch ACTION_MOVE")
+                        log("parent OnTouchListener.onTouch ACTION_MOVE")
                     }
                     MotionEvent.ACTION_UP -> {
-                        toast("OnTouchListener.onTouch ACTION_UP")
+                        log("parent OnTouchListener.onTouch ACTION_UP")
                     }
                 }
                 return false
@@ -53,6 +53,23 @@ class TouchEventActivity : BaseActivity() {
         }
 
         val tvChild = findViewById<ChildTextView>(R.id.tv_child)
+        tvChild.setOnTouchListener(object : View.OnTouchListener {
+            override fun onTouch(v: View, event: MotionEvent): Boolean {
+                when (event.action) {
+                    MotionEvent.ACTION_DOWN -> {
+                        log("child OnTouchListener.onTouch ACTION_DOWN")
+                    }
+                    MotionEvent.ACTION_MOVE -> {
+                        log("child OnTouchListener.onTouch ACTION_MOVE")
+                    }
+                    MotionEvent.ACTION_UP -> {
+                        log("child OnTouchListener.onTouch ACTION_UP")
+                    }
+                }
+                return false
+            }
+
+        })
         tvChild.setOnClickListener {
             toast("child点击了")
         }

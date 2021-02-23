@@ -23,6 +23,8 @@ class ChildTextView : AppCompatTextView {
     }
 
     override fun dispatchTouchEvent(ev: MotionEvent): Boolean {
+        Log.e(TAG, "ChildTextView-dispatchTouchEvent")
+//        parent.requestDisallowInterceptTouchEvent(true)
         return super.dispatchTouchEvent(ev)
     }
 
@@ -30,6 +32,7 @@ class ChildTextView : AppCompatTextView {
         when (event.action) {
             MotionEvent.ACTION_DOWN -> {
                 Log.e(TAG, "ChildTextView-onTouchEvent ACTION_DOWN")
+                return true
             }
             MotionEvent.ACTION_MOVE -> {
                 Log.e(TAG, "ChildTextView-onTouchEvent  ACTION_MOVE")

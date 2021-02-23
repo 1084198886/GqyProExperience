@@ -26,7 +26,8 @@ enum class FuncMenu(desc: String) {
     PullToZoomListView("下拉缩放Header的ListView"),
     PullToZoomScrollView("下拉缩放Header的ScrollView"),
     PullToZoomRecyclerView("下拉缩放Header的RecyclerView"),
-    TouchEventDemo("触摸事件测试");
+    TouchEventDemo("触摸事件测试"),
+    RequestDisallowInterceptTouchEvent("getParent().requestDisallowInterceptTouchEvent方法的使用");
 
     var desc = desc
 }
