@@ -44,7 +44,9 @@ class ChildTextView : AppCompatTextView {
                 Log.e(TAG, "ChildTextView-onTouchEvent  ACTION_UP")
             }
         }
-        return false
-        //        return super.onTouchEvent(event);
+        return true
+//        val ret = super.onTouchEvent(event);
+//        Log.e(TAG, "ChildTextView-onTouchEvent  ret:$ret")
+//        return ret
     }
 }

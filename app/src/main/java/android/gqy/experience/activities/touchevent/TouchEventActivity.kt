@@ -3,7 +3,6 @@ package android.gqy.experience.activities.touchevent
 import android.annotation.SuppressLint
 import android.gqy.experience.R
 import android.gqy.experience.activities.BaseActivity
-import android.gqy.experience.activities.touchevent.view.ChildContainerView
 import android.gqy.experience.activities.touchevent.view.ChildTextView
 import android.gqy.experience.activities.touchevent.view.ParentContainerView
 import android.gqy.experience.utils.ToastUtil
@@ -71,6 +70,11 @@ class TouchEventActivity : BaseActivity() {
             }
 
         })
+        tvChild.setOnLongClickListener {
+            toast("child长按了")
+            // 返回false时，可同时执行click点击事件
+            false
+        }
         tvChild.setOnClickListener {
             toast("child点击了")
         }

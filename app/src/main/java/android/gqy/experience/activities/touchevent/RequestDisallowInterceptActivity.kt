@@ -1,11 +1,15 @@
 package android.gqy.experience.activities.touchevent
 
+import android.annotation.SuppressLint
 import android.gqy.experience.R
 import android.gqy.experience.activities.BaseActivity
 import android.gqy.experience.activities.coordinatorlayout.CoordinatorPageAdapter
 import android.gqy.experience.activities.touchevent.fragment.IFragmentCallback
 import android.gqy.experience.activities.touchevent.fragment.TouchEventFragment
 import android.os.Bundle
+import android.util.Log
+import android.view.MotionEvent
+import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentPagerAdapter
 import androidx.viewpager.widget.ViewPager
@@ -15,20 +19,38 @@ import com.google.android.material.tabs.TabLayout
  * created by  gqy on 2021/2/23
  * @desc View的getParent().requestDisallowInterceptTouchEvent(true)使用
  */
-class RequestDisallowInterceptTouchEventActivity : BaseActivity(), IFragmentCallback {
+class RequestDisallowInterceptActivity : BaseActivity(), IFragmentCallback {
+    val TAG = "TouchEvent"
     private lateinit var tabLayout: TabLayout
     private lateinit var viewPager: ViewPager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_requestdisallowintercepttouchevent)
+        setContentView(R.layout.activity_requestdisallowintercept)
         initView()
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     private fun initView() {
         tabLayout = findViewById(R.id.tabLayout)
         viewPager = findViewById(R.id.viewPager)
         viewPager.offscreenPageLimit = 3
+        viewPager.setOnTouchListener(object : View.OnTouchListener {
+            override fun onTouch(v: View, event: MotionEvent): Boolean {
+                when (event.action) {
+                    MotionEvent.ACTION_DOWN -> {
+                        log("ViewPager OnTouchListener.onTouch ACTION_DOWN")
+                    }
+                    MotionEvent.ACTION_MOVE -> {
+                        log("ViewPager OnTouchListener.onTouch ACTION_MOVE")
+                    }
+                    MotionEvent.ACTION_UP -> {
+                        log("ViewPager OnTouchListener.onTouch ACTION_UP")
+                    }
+                }
+                return false
+            }
+        })
 
         val adapter = CoordinatorPageAdapter(
             supportFragmentManager,
@@ -52,6 +74,10 @@ class RequestDisallowInterceptTouchEventActivity : BaseActivity(), IFragmentCall
 
     override fun getViewPager(): ViewPager {
         return viewPager
+    }
+
+    fun log(msg: String) {
+        Log.e(TAG, msg)
     }
 
 }

@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.gqy.experience.R
 import android.gqy.experience.activities.touchevent.adapter.TouchEventAdapter
+import android.util.Log
 import android.view.MotionEvent
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -67,11 +68,19 @@ class TouchEventFragment : Fragment() {
         recyclerView.setOnTouchListener(object : View.OnTouchListener {
             override fun onTouch(v: View, event: MotionEvent): Boolean {
                 when (event.action) {
+                    MotionEvent.ACTION_DOWN -> {
+                        log("horiz recyclerView OnTouchListener.onTouch ACTION_DOWN")
+                    }
                     MotionEvent.ACTION_MOVE -> {
                         callBack!!.getViewPager().requestDisallowInterceptTouchEvent(true)
+                        log("horiz recyclerView OnTouchListener.onTouch ACTION_MOVE")
                     }
                     MotionEvent.ACTION_UP -> {
                         callBack!!.getViewPager().requestDisallowInterceptTouchEvent(false)
+                        log("horiz recyclerView OnTouchListener.onTouch ACTION_UP")
+                    }
+                    MotionEvent.ACTION_CANCEL -> {
+                        log("horiz recyclerView OnTouchListener.onTouch ACTION_CANCEL")
                     }
                 }
                 return false
@@ -84,6 +93,10 @@ class TouchEventFragment : Fragment() {
         }
         adapter.setData(datas)
         recyclerView.adapter = adapter
+    }
+
+    fun log(msg: String) {
+        Log.e("TouchEvent", msg)
     }
 
     companion object {

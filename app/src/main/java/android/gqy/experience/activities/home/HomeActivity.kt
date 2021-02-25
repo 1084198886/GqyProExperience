@@ -16,7 +16,7 @@ import android.gqy.experience.activities.pulltozoomview.PullToZoomScrollActivity
 import android.gqy.experience.activities.pulltozoomview.recyclerview.PullToZoomRecyclerActivity
 import android.gqy.experience.activities.scroller.ScrollerUsageActivity
 import android.gqy.experience.activities.scroller.ScrollParallaxActivity
-import android.gqy.experience.activities.touchevent.RequestDisallowInterceptTouchEventActivity
+import android.gqy.experience.activities.touchevent.RequestDisallowInterceptActivity
 import android.gqy.experience.activities.touchevent.TouchEventActivity
 import android.gqy.experience.utils.RecyclerViewDivider
 import android.os.Bundle
@@ -73,7 +73,7 @@ class HomeActivity : BaseActivity() {
             FuncMenu.PullToZoomScrollView -> jumpToActivity(PullToZoomScrollActivity::class.java)
             FuncMenu.PullToZoomRecyclerView -> jumpToActivity(PullToZoomRecyclerActivity::class.java)
             FuncMenu.TouchEventDemo -> jumpToActivity(TouchEventActivity::class.java)
-            FuncMenu.RequestDisallowInterceptTouchEvent -> jumpToActivity(RequestDisallowInterceptTouchEventActivity::class.java)
+            FuncMenu.RequestDisallowInterceptTouchEvent -> jumpToActivity(RequestDisallowInterceptActivity::class.java)
         }
     }
 
