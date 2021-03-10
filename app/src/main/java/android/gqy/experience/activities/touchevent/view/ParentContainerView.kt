@@ -61,7 +61,7 @@ class ParentContainerView : LinearLayout {
             }
             MotionEvent.ACTION_UP -> {
                 Log.e(TAG, "ParentContainerView-onInterceptTouchEvent ACTION_UP")
-                return true
+                return false
             }
         }
         return false
@@ -69,10 +69,12 @@ class ParentContainerView : LinearLayout {
     }
 
     override fun onTouchEvent(event: MotionEvent): Boolean {
+        Log.e(TAG, "ParentContainerView-onTouchEvent getX=${event.x},getY=${event.y}")
+
         when (event.action) {
             MotionEvent.ACTION_DOWN -> {
                 Log.e(TAG, "ParentContainerView-onTouchEvent ACTION_DOWN")
-//                return false
+                return false
             }
             MotionEvent.ACTION_MOVE -> {
                 Log.e(TAG, "ParentContainerView-onTouchEvent  ACTION_MOVE")

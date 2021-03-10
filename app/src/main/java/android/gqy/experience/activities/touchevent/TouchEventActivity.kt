@@ -10,6 +10,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.MotionEvent
 import android.view.View
+import kotlinx.android.synthetic.main.activity_touch_event.view.*
 
 /**
  * @author created by gqy on 2021/02/22
@@ -22,6 +23,12 @@ class TouchEventActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_touch_event)
         initView()
+
+        val metrics = resources.displayMetrics
+        Log.e(
+            TAG,
+            "hardware density[${metrics.density}],width:${metrics.widthPixels},height:${metrics.heightPixels}"
+        )
     }
 
     /**
@@ -77,6 +84,22 @@ class TouchEventActivity : BaseActivity() {
         }
         tvChild.setOnClickListener {
             toast("child点击了")
+        }
+
+        findViewById<View>(R.id.btn_offsetLeftAndRight).setOnClickListener {
+            tvChild.offsetLeftAndRight(20)
+        }
+        findViewById<View>(R.id.offsetTopAndBottom).setOnClickListener {
+            tvChild.offsetTopAndBottom(20)
+        }
+        findViewById<View>(R.id.scrollContent).setOnClickListener {
+            llParent.scrollTo(10, 0)
+        }
+        findViewById<View>(R.id.setTranslationX).setOnClickListener {
+            tvChild.translationX = 20f
+        }
+        findViewById<View>(R.id.setTranslationY).setOnClickListener {
+            tvChild.translationY = 20f
         }
     }
 

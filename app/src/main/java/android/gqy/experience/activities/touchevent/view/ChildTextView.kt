@@ -29,10 +29,12 @@ class ChildTextView : AppCompatTextView {
     }
 
     override fun onTouchEvent(event: MotionEvent): Boolean {
+        Log.e(TAG, "ChildTextView-onTouchEvent getX=${event.x},getY=${event.y}")
+
         when (event.action) {
             MotionEvent.ACTION_DOWN -> {
                 Log.e(TAG, "ChildTextView-onTouchEvent ACTION_DOWN")
-                return true
+                return false
             }
             MotionEvent.ACTION_MOVE -> {
                 Log.e(TAG, "ChildTextView-onTouchEvent  ACTION_MOVE")
@@ -44,7 +46,7 @@ class ChildTextView : AppCompatTextView {
                 Log.e(TAG, "ChildTextView-onTouchEvent  ACTION_UP")
             }
         }
-        return true
+        return false
 //        val ret = super.onTouchEvent(event);
 //        Log.e(TAG, "ChildTextView-onTouchEvent  ret:$ret")
 //        return ret
