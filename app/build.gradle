@@ -94,4 +94,7 @@ dependencies {
     implementation project(':imgselectorlib')
     implementation 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.5@aar'
     implementation 'org.apache.commons:commons-lang3:3.9'
+
+    // 一个极低成本的Android屏幕适配方案
+    implementation 'me.jessyan:autosize:1.2.1'
 }

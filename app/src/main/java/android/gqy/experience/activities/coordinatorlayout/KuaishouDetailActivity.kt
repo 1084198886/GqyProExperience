@@ -33,7 +33,7 @@ class KuaishouDetailActivity : BaseActivity() {
         surfaceView.holder!!.addCallback(holderCallBack)
         recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-        recyclerView.addItemDecoration(RecyclerViewDivider(this, 2, RecyclerView.VERTICAL))
+        recyclerView.addItemDecoration(RecyclerViewDivider(this, 2, RecyclerView.HORIZONTAL))
         val adapter = CoordinatorAdapter(this)
         adapter.setData(arrayListOf("item1", "item2", "item3", "item4", "item5", "item6", "item7", "item8", "item9", "item10"))
         recyclerView.adapter = adapter
