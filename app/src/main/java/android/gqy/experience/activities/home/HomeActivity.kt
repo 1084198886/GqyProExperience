@@ -22,6 +22,7 @@ import android.gqy.experience.utils.RecyclerViewDivider
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.newcapec.lib.melexis.NcJni
 
 /**
  * created by gqy on 2021/01/28
@@ -35,6 +36,7 @@ class HomeActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
         initView()
+        NcJni.InitParameters("11".toByteArray())
     }
 
     private fun initView() {

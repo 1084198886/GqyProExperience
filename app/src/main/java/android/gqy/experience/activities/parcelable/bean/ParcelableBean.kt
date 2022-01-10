@@ -20,7 +20,7 @@ class ParcelableBean() : Parcelable {
     constructor(parcel: Parcel) : this() {
         this.id = parcel.readInt()
         this.name = parcel.readString()
-        this.tags = parcel.createStringArrayList()
+        this.tags = parcel.createStringArrayList() as ArrayList<String>
         // 读取对象需要提供一个类加载器,因为写入的时候写入了类的相关信息
         this.book = parcel.readParcelable(Book::class.java.classLoader)
         //这一类需要用相应的类加载器去获取,对应writeList

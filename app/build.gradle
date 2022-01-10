@@ -6,7 +6,7 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 30
     buildToolsVersion "29.0.3"
 
     signingConfigs {
@@ -27,7 +27,7 @@ android {
     defaultConfig {
         applicationId "com.newcapec.experience"
         minSdkVersion 21
-        targetSdkVersion 28
+        targetSdkVersion 30
 
         versionName androidGitVersion.name()
         versionCode androidGitVersion.code()
@@ -38,6 +38,13 @@ android {
         multiDexEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         signingConfig signingConfigs.debug
+
+//        externalNativeBuild {
+//            cmake {
+//                cppFlags ""
+//                abiFilters 'armeabi-v7a', 'arm64-v8a'
+//            }
+//        }
     }
     buildTypes {
         release {
@@ -49,6 +56,13 @@ android {
             signingConfig signingConfigs.debug
         }
     }
+
+//    externalNativeBuild {
+//        cmake {
+//            path "src/main/cpp/CMakeLists.txt"
+//            version "3.10.2"
+//        }
+//    }
 
     //修改生成的最终文件名
     applicationVariants.all { variant ->
