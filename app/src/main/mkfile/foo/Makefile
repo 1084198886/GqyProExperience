@@ -18,10 +18,10 @@ endif
 #Makefile使用#注释
 VERSION=$(shell git describe   --dirty --always --tags)
 
-apk:
+fooapk:
 	@echo "GRADLE="$(GRADLE)",OS="$(OS)+",version="$(VERSION)
-	cat $(APPPATH)/$(BUILDAPK) $(SALT_KEY) | sha256sum - | cut -d' ' -f 1 | tr -d '\n' > $(APPPATH)/$(SIGN_FILE)
-	cd $(APPPATH) && $(ZIP) ExperiencePro-$(VERSION).zip $(SIGN_FILE) $(BUILDAPK)
+	#cat $(APPPATH)/$(BUILDAPK) $(SALT_KEY) | sha256sum - | cut -d' ' -f 1 | tr -d '\n' > $(APPPATH)/$(SIGN_FILE)
+	#cd $(APPPATH) && $(ZIP) ExperiencePro-$(VERSION).zip $(SIGN_FILE) $(BUILDAPK)
 
 clean:
 	@echo "remove build cache apk!"

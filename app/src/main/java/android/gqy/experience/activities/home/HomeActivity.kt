@@ -36,7 +36,6 @@ class HomeActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
         initView()
-        NcJni.InitParameters("11".toByteArray())
     }
 
     private fun initView() {
