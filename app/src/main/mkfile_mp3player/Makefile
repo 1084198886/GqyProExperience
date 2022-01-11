@@ -5,7 +5,7 @@ libraries := $(lib_codec) $(lib_db) $(lib_ui)
 player    := app/player
 MAKE=make
 
-.PHONY : all $(player) $(libraries)
+.PHONY : all $(player) $(libraries) test lib
 all: $(player)
 
 $(player) $(libraries):
@@ -13,3 +13,11 @@ $(player) $(libraries):
 	$(MAKE) -C $@
 $(player) : $(libraries)
 $(lib_ui) : $(lib_db) $(lib_codec)
+
+
+a:=a
+b:=b
+lib:= $(a) $(b)
+test:$(lib)
+$(lib):
+	$(info  "lib start=============="$@)
