@@ -12,6 +12,7 @@ enum class FuncMenu(desc: String) {
     NestedScrollView("NestedScrollView嵌套RecyclerView使用"),
     FileProvider("FileProvider使用"),
     CircleProgressBar("Canvas绘制圆形进度条"),
+    GRPC_GO("grpc在Go中的使用"),
     Scroller("Scroller实现下拉回弹"),
     ScrollParallax("滚动视差效果"),
     DrawViewPagerIndicator("Canvas绘制ViewPager指示器"),

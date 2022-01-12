@@ -85,6 +85,7 @@
         <activity android:name=".activities.scroller.ScrollParallaxActivity" />
         <activity android:name=".activities.touchevent.TouchEventActivity" />
         <activity android:name=".activities.touchevent.RequestDisallowInterceptActivity" />
+        <activity android:name=".activities.grpcgo.GrpcGoActivity" />
 
         <provider
             android:name="androidx.core.content.FileProvider"

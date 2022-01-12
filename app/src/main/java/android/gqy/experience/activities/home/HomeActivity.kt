@@ -6,6 +6,7 @@ import android.gqy.experience.activities.coordinatorlayout.*
 import android.gqy.experience.activities.drawindicator.DrawViewPagerIndicatorActivity
 import android.gqy.experience.activities.drawrotecircle.CirclePgBarActivity
 import android.gqy.experience.activities.fileprovider.FileProviderActivity
+import android.gqy.experience.activities.grpcgo.GrpcGoActivity
 import android.gqy.experience.activities.home.adapter.AppFunctionAdapter
 import android.gqy.experience.activities.home.bean.FuncMenu
 import android.gqy.experience.activities.imageselector.ImageSelectorActivity
@@ -63,6 +64,7 @@ class HomeActivity : BaseActivity() {
             FuncMenu.Scroller -> jumpToActivity(ScrollerUsageActivity::class.java)
             FuncMenu.DrawViewPagerIndicator -> jumpToActivity(DrawViewPagerIndicatorActivity::class.java)
             FuncMenu.CoordinatorLayout -> jumpToActivity(CoordinatorLayoutActivity::class.java)
+            FuncMenu.GRPC_GO -> jumpToActivity(GrpcGoActivity::class.java)
             FuncMenu.GoogleScrollingActivity -> jumpToActivity(GoogleScrollingActivity::class.java)
             FuncMenu.MatialDesignBehavior -> jumpToActivity(BehaviorActivity::class.java)
             FuncMenu.BottomSheetBehavior -> jumpToActivity(BottomSheetBehaviorActivity::class.java)
@@ -88,6 +90,7 @@ class HomeActivity : BaseActivity() {
         list.add(FuncMenu.ScrollParallax)
         list.add(FuncMenu.DrawViewPagerIndicator)
         list.add(FuncMenu.CoordinatorLayout)
+        list.add(FuncMenu.GRPC_GO)
         list.add(FuncMenu.GoogleScrollingActivity)
         list.add(FuncMenu.MatialDesignBehavior)
         list.add(FuncMenu.BottomSheetBehavior)

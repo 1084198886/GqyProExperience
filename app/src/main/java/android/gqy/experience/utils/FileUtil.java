@@ -236,7 +236,7 @@ public class FileUtil {
      */
     public static String getDbPath() {
         if (Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState())) {
-            return Environment.getExternalStorageDirectory().getAbsolutePath() + "/supwisdom";
+            return Environment.getExternalStorageDirectory().getAbsolutePath() + "/grpcdemo";
         }
         return null;
     }

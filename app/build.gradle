@@ -154,4 +154,6 @@ dependencies {
     api group: 'io.grpc', name: 'grpc-protobuf', version: '1.37.0'
     api 'io.grpc:grpc-android:1.36.1'
     api 'io.grpc:grpc-okhttp:1.36.1'
+
+    implementation files('libs/grpc_go_demo.aar')
 }
