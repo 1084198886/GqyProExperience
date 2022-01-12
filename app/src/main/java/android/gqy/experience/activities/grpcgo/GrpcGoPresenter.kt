@@ -35,7 +35,9 @@ class GrpcGoPresenter(val grpcView: IGrpcGoView) {
             user =
                 User(agentId, dbPath, gRPCPort, tlsCert, tlsKey, caCert, object : GrpcDemoService {
                     override fun signin(devphyid: String): SignInResp {
-                        return  SignInResp()
+                        Log.e(TAG,"app recv  devphyid:$devphyid")
+                        return  SignInResp().apply {
+                        }
                     }
                 })
             user!!.run()
