@@ -10,7 +10,7 @@ import grpc.User
 import java.util.*
 
 class GrpcGoPresenter(val grpcView: IGrpcGoView) {
-    private val TAG="GrpcGoPresenter"
+    private val TAG = "GrpcGoPresenter"
     private var user: User? = null
     private val grpcRunnable = GrpcRunnable()
 
@@ -25,7 +25,7 @@ class GrpcGoPresenter(val grpcView: IGrpcGoView) {
 
     private inner class GrpcRunnable : Runnable {
         override fun run() {
-            Log.e(TAG,"run start")
+            Log.e(TAG, "run start")
             val agentId = "001"
             val dbPath = FileUtil.getDbPath()
             val gRPCPort = 10808L
@@ -35,13 +35,19 @@ class GrpcGoPresenter(val grpcView: IGrpcGoView) {
             user =
                 User(agentId, dbPath, gRPCPort, tlsCert, tlsKey, caCert, object : GrpcDemoService {
                     override fun signin(devphyid: String): SignInResp {
-                        Log.e(TAG,"app recv  devphyid:$devphyid")
-                        return  SignInResp().apply {
+                        Log.e(TAG, "app recv  devphyid:$devphyid")
+                        grpcView.getActivity().runOnUiThread {
+                            grpcView.appendContent("接收到请求：$devphyid")
+                        }
+                        return SignInResp().apply {
+                            this.devphyid = devphyid
+                            this.retcode = 0
+                            this.retmsg = "业务接口返回"
                         }
                     }
                 })
             user!!.run()
-            Log.e(TAG,"run stopped")
+            Log.e(TAG, "run stopped")
         }
     }
 
