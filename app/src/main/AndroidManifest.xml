@@ -86,6 +86,7 @@
         <activity android:name=".activities.touchevent.TouchEventActivity" />
         <activity android:name=".activities.touchevent.RequestDisallowInterceptActivity" />
         <activity android:name=".activities.grpcgo.GrpcGoActivity" />
+        <activity android:name=".activities.androidinvokejs.AndroidInvokeJsActivity" />
 
         <provider
             android:name="androidx.core.content.FileProvider"

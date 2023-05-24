@@ -2,6 +2,7 @@ package android.gqy.experience.activities.home
 
 import android.gqy.experience.R
 import android.gqy.experience.activities.BaseActivity
+import android.gqy.experience.activities.androidinvokejs.AndroidInvokeJsActivity
 import android.gqy.experience.activities.coordinatorlayout.*
 import android.gqy.experience.activities.drawindicator.DrawViewPagerIndicatorActivity
 import android.gqy.experience.activities.drawrotecircle.CirclePgBarActivity
@@ -65,6 +66,7 @@ class HomeActivity : BaseActivity() {
             FuncMenu.DrawViewPagerIndicator -> jumpToActivity(DrawViewPagerIndicatorActivity::class.java)
             FuncMenu.CoordinatorLayout -> jumpToActivity(CoordinatorLayoutActivity::class.java)
             FuncMenu.GRPC_GO -> jumpToActivity(GrpcGoActivity::class.java)
+            FuncMenu.AndroidInvokeJs -> jumpToActivity(AndroidInvokeJsActivity::class.java)
             FuncMenu.GoogleScrollingActivity -> jumpToActivity(GoogleScrollingActivity::class.java)
             FuncMenu.MatialDesignBehavior -> jumpToActivity(BehaviorActivity::class.java)
             FuncMenu.BottomSheetBehavior -> jumpToActivity(BottomSheetBehaviorActivity::class.java)

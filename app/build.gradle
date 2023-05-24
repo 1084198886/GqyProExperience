@@ -155,5 +155,6 @@ dependencies {
     api 'io.grpc:grpc-android:1.36.1'
     api 'io.grpc:grpc-okhttp:1.36.1'
 
+    implementation 'com.github.lzyzsd:jsbridge:1.0.4'
     implementation files('libs/grpc_go_demo.aar')
 }
